@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Word Guess Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="box">
+      <header>
+        <h1>Word Guess</h1>
+        <p>Guess the 5-letter word. You get 6 tries.</p>
+      </header>
+
+      <!-- Game board (tiles added by JS) -->
+      <section id="gameBoard" class="grid" aria-label="Game board"></section>
+
+      <!-- Input area -->
+      <section class="row">
+        <input
+          id="playerGuess"
+          maxlength="5"
+          pattern="[A-Za-z]{5}"
+          title="Please type exactly 5 letters (A-Z)."
+          placeholder="Type here"
+          autocomplete="off"
+        />
+        <button id="enterButton" type="button">Enter</button>
+      </section>
+
+      <p id="message"></p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
